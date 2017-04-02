@@ -14,7 +14,8 @@ RUN docker-php-ext-configure gd \
     --with-jpeg-dir=/usr/lib \
     --with-freetype-dir=/usr/include/freetype2
 
-# Install extensions using the helper script provided by the base image RUN docker-php-ext-install \
+# Install extensions using the helper script provided by the base image 
+RUN docker-php-ext-install \
     mcrypt \
     bcmath \
     pdo_mysql \
