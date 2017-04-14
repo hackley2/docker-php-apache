@@ -24,6 +24,9 @@ RUN docker-php-ext-install \
     gd \
     zip
 
+# enable the apache rewrite module
+RUN a2enmod rewrite
+
 # install composer
 RUN /usr/bin/curl -sS https://getcomposer.org/installer | /usr/local/bin/php
 RUN /bin/mv composer.phar /usr/local/bin/composer
